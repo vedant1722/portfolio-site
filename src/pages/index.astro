@@ -1,9 +1,34 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { generateImageUrl } from "../utils/url.util";
 
-
+const profileSrc = generateImageUrl("profile_OujidRzocJ.jpg", "tr:w-150");
+const xProfile = "https://x.com/theproductguy_";
+const linkedInProfile = "https://www.linkedin.com/in/vedant-codes/";
 ---
 <BaseLayout title="Vedant Jain | Home">
-	<h1>Hello world!</h1>
-    <p>I am Vedant.</p>
+    <img src={profileSrc} alt="Vedant Jain" class="rounded-lg my-7 w-26 lg:w-36"/>
+    <p class="antialiased leading-relaxed my-5">Hi, I’m Vedant.</p>
+    <p class="antialiased leading-relaxed my-5">
+    I’m a Software Engineer passionate about building impactful solutions and learning through the process.
+    </p>
+    <!-- <p class="leading-relaxed my-5">My journey as a developer began during my under grad years and my love for startups and products developed during my first internship. Starting from frontend, I learned backend and transitione to fullstack. Now primarily working on backend development. Currently, I am leading the backend development for Railofy (India's lasrgest food delivery in train startup)</p> -->
+    <p class="antialiased leading-relaxed my-5">I discovered my love for programing during my undergraduate years and developed a passion for startups and building products during my first internship. I began with frontend development, transitioned to fullstack, and now focus primarily on backend development. Currently, I’m a Sr. Senior Engineer at Railofy, India’s largest food delivery-in-train startup.</p>  
+    <p class="antialiased leading-relaxed my-5">
+    Over the years, I’ve had the privilege of working with early-stage startups and collaborating closely with founders. This experience has shaped my <span class="font-medium">product-focused approach to development</span>, enabling me to:
+    </p>
+    <ul class="antialiased list-disc list-inside ml-0 lg:ml-5 leading-relaxed">
+        <li>Consider the broader product-wide impacts of features.</li>
+        <li>Design solutions that create net-positive outcomes for all stakeholders.</li>
+        <li>Anticipate and plan for feature scalability and extensibility.</li>
+        <li>Keep my fellow developers and mentees excited about the work we’re doing.</li>
+    </ul>
+    <p class="antialiased leading-relaxed my-5">
+        When I’m not coding, I’m usually learning about the philosophies of the greatest minds and practicing self-control. I’m also deeply interested in personal finance, health, and music. On the side, I’m a noob barista, experimenting with brewing the perfect cup of coffee. You can often find me obsessing over something new and fascinating.
+    </p>
+    <p class="antialiased leading-relaxed my-5">You can connect with me on
+        <a href={xProfile} class="text-sky-400">X</a>
+        and 
+        <a href={linkedInProfile} class="text-sky-400">LinkedIn</a>.</p>
 </BaseLayout>
