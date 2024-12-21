@@ -19,12 +19,7 @@ export default defineConfig({
   ],
   topNav: [ 
     { text: 'About', link: '/' },
+    { text: 'Experience', link: '/experience' },
     { text: 'Blog', link: '/blog' },
   ],
-  // theme: {
-  //   accentColor: {
-  //     dark: '#f43f5e',
-  //     light: '#e11d48'
-  //   }
-  // }
 })
